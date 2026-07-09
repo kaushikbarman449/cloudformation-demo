@@ -28,3 +28,8 @@ jobs:
               --template-file cloudformation/template.yaml \
               --stack-name demo-stack \
               --capabilities CAPABILITY_NAMED_IAM
+
+      - name: Upload File
+
+        run: |
+          aws s3 cp files/A_Billion_Wicked_Thoughts.pdf s3://kaushik-demo-cf-bucket-70025
